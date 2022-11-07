@@ -209,10 +209,9 @@ brew_cleanup() {
 main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
     # Leave list blank or comment out the list if not required.
-    tap_list="homebrew/cask-fonts"
-    term_list="git htop wget curl tmux"
-    cask_list="the-unarchiver vlc visual-studio-code google-chrome \
-    firefox adobe-acrobat-reader malwarebytes font-fira-code"
+    tap_list="homebrew/cask-fonts pyenv zsh"
+    term_list="git wget curl " #tmux
+    cask_list="visual-studio-code google-chrome docker iterm2"
     clear
     term_colors
     script_info
