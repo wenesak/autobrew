@@ -203,8 +203,14 @@ brew_packages() {
 }
 
 install-oh-my-zsh(){
-term_message mb "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    term_message mb "Installing oh-my-zsh..."
+    task_start "Checking for oh-my-zsh..."
+    if [ ! -d "/$home/.oh-my-zsh" ]; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        task_done "oh-my-zsh installed.$(tput el)"
+    else
+        task_done "oh-my-zsh already installed.$(tput el)"
+    fi    
 }
 
 brew_cleanup() {
