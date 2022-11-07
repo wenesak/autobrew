@@ -11,6 +11,7 @@ Name:           autobrew.sh
 Description:    Automate the installation of macOS 
                 applications and packages using homebrew
 Author:         Mark Bradley
+Updated by:     Juan Olvera
 Requirements:   Command Line Tools (CLT) for Xcode
 
 EOF
