@@ -228,7 +228,7 @@ main() {
     # Leave list blank or comment out the list if not required.
     tap_list="homebrew/cask-fonts zsh zsh-autosuggestions"
     term_list="git wget curl " #tmux
-    cask_list=" visual-studio-code  docker iterm2 " #google-chrome
+    cask_list=" visual-studio-code  docker iterm2 zsh-autosuggestions" #google-chrome
     clear
     term_colors
     script_info
