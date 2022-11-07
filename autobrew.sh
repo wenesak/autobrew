@@ -226,7 +226,7 @@ brew_cleanup() {
 main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
     # Leave list blank or comment out the list if not required.
-    tap_list="homebrew/cask-fonts zsh zsh-autosuggestions"
+    tap_list="homebrew/cask-fonts zsh "
     term_list="git wget curl " #tmux
     cask_list=" visual-studio-code  docker iterm2 zsh-autosuggestions" #google-chrome
     clear
