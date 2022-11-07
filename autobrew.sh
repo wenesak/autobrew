@@ -220,9 +220,9 @@ brew_cleanup() {
 main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
     # Leave list blank or comment out the list if not required.
-    tap_list="pyenv-virtualen homebrew/cask-fonts zsh "
+    tap_list="pyenv homebrew/cask-fonts zsh "
     term_list="git wget curl " #tmux
-    cask_list=" visual-studio-code google-chrome docker iterm2 "
+    cask_list=" visual-studio-code  docker iterm2 " #google-chrome
     clear
     term_colors
     script_info
@@ -230,6 +230,7 @@ main() {
     check_xcode
     install_homebrew
     brew_packages
+    install-oh-my-zsh
     brew_cleanup
     term_message gb "\nScript completed."
 }
