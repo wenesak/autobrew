@@ -24,5 +24,14 @@ Homebrew does require the Xcode commandline tools. Use the command `xcode-select
 
 ### Note(s):
 
+- Add zsh autocompletetion:
+  sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  Once that is done, add the plugin in the ~/.zshrc file's plugin list.
+  ```bash
+  plugins=(
+  ...
+  zsh-autosuggestions
+)
+  ```
 - After the initial Xcode commmand line tools install and homebrew install most applications will be unattended and not require user input. However, some applications which require greater system or kernel access such as virus scanners like `malwarebytes` etc. may require your password.  
 - Due to the security settings in macOS when you run some brew installed packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may also need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
