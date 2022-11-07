@@ -202,6 +202,11 @@ brew_packages() {
     fi
 }
 
+install-oh-my-zsh(){
+term_message mb "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+}
+
 brew_cleanup() {
     task_start "Running brew cleanup..."
     if brew cleanup >/dev/null 2>&1; then
@@ -215,9 +220,9 @@ brew_cleanup() {
 main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
     # Leave list blank or comment out the list if not required.
-    tap_list="homebrew/cask-fonts"
+    tap_list="pyenv-virtualen homebrew/cask-fonts zsh "
     term_list="git wget curl " #tmux
-    cask_list="pyenv visual-studio-code google-chrome docker iterm2 zsh"
+    cask_list=" visual-studio-code google-chrome docker iterm2 "
     clear
     term_colors
     script_info
