@@ -134,7 +134,12 @@ install_homebrew() {
     else
         task_fail "\n"
         term_message mb "Attempting to install Homebrew..."
-        if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
+         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        term_message mb "Adding Homebrew to your PATH..."
+         echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+         eval "$(/opt/homebrew/bin/brew shellenv)"
+        if command_exists "brew"; then
             task_done "Homebrew installed.\n"
         else
             task_fail "Homebrew install failed.\n"
