@@ -188,7 +188,7 @@ brew_packages() {
         for cask in ${cask_list}; do
             task_start "Checking for cask package > ${cask}"
             if brew list --cask "${cask}" >/dev/null 2>&1; then
-                task_done "Package ${cask} already installed.$(tput el)"
+                task_done "Package ${cask} already installed.$(tput el).\n"
             else
                 task_fail "\n"
                 term_message mb "Attempting to install ${cask}..."
@@ -209,7 +209,7 @@ install-oh-my-zsh(){
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
         task_done "oh-my-zsh installed.$(tput el)"
     else
-        task_done "oh-my-zsh already installed.$(tput el)"
+        task_done "oh-my-zsh already installed.$(tput el).\n"
     fi    
 }
 
@@ -219,7 +219,7 @@ brew_cleanup() {
     if brew cleanup >/dev/null 2>&1; then
         task_done "Brew cleanup completed.$(tput el)"
     else
-        task_fail "Brew cleanup failed.$(tput el)"
+        task_fail "Brew cleanup failed.$(tput el).\n"
     fi
 }
 
