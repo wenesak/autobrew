@@ -203,7 +203,7 @@ brew_packages() {
 }
 
 install-oh-my-zsh(){
-    term_message mb "Installing oh-my-zsh..."
+    term_message cb "Installing oh-my-zsh..."
     task_start "Checking for oh-my-zsh..."
     if [ ! -d ~/.oh-my-zsh ]; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
@@ -214,6 +214,7 @@ install-oh-my-zsh(){
 }
 
 brew_cleanup() {
+    term_message cb "Running brew cleanup..."
     task_start "Running brew cleanup..."
     if brew cleanup >/dev/null 2>&1; then
         task_done "Brew cleanup completed.$(tput el)"
